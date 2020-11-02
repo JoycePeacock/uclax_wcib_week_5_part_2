@@ -9,17 +9,6 @@ a:hover {
   color: #fff;
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
-
 /*
  * Base structure
  */
@@ -28,8 +17,9 @@ html,
 body {
   height: 100%;
   background-color: #333;
-}
-
+  background-image: url(../images/cityscape.jpg);
+  background-size; cover;
+  }
 body {
   display: -ms-flexbox;
   display: flex;
@@ -103,4 +93,12 @@ body {
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+button {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+  padding: .75rem 1.25rem;
+  font-weight: 700;
 }
