@@ -3,24 +3,61 @@
 
   <head>
     <meta charset="utf-8">
-
-    <title>Week 5, Part 2</title>
-
+    <link rel="icon" href="https://joycepeacocklibrarian.xyz/images/jpfavicon.png" />
+    <title>Once a Story</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+      </head>
+      <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+          <header class="masthead mb-auto">
+            <div class="inner">
+              <h3 class="masthead-brand">Just a Silly Stoy Generator</h3>
+              <nav class="nav nav-masthead justify-content-center">
+                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link" href="#">More Silly Stories</a>
+                <a class="nav-link" href="mailto:jpeacock@cypresscollege.edu">Contact</a>
+              </nav>
+            </div>
+          </header>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
+          <main role="main" class="inner cover">
+            <h1 class="cover-heading">Once upon a Silly Story.</h1>
+            <p class="lead">Let us create a story for you. Fill in the blanks and select some choices and see what adventure awaits!</p>
+            <p class="lead">
+              <div>
+                <label for="customname">Enter a name:</label>
+                <input id="customname" type="text" placeholder="">
+              </div>
+              <div>
+                <label for="Story1">Story 1</label><input id="Story 1" type="radio" name="story1" value="story1" checked>
+                <label for="Story2">Story 2</label><input id="Story 2" type="radio" name="story2" value="story2">
+              </div>
+              <div>
+                <label for="us">US</label><input id="us" type="radio" name="ukus" value="us" checked>
+                <label for="uk">UK</label><input id="uk" type="radio" name="ukus" value="uk">
+              </div>
+              <div>
+                <button class="randomize">Generate random story</button>
+              </div>
+              <!-- Thanks a lot to Willy Aguirre for his help with the code for this assessment -->
+              <p class="story">
+              </p>
+            </main>
 
-  <body>
+          <footer class="mastfoot mt-auto">
+            <div class="inner">
+              <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </footer>
+        </div>
 
-    <h1>Week 5, Part 2</h1>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+    	</body>
 
-	</body>
-
-</html>
+    </html>
