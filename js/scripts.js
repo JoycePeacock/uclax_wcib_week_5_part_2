@@ -11,7 +11,6 @@ function randomValueFromArray(array){
 }
 
 let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day. Bob then took :insertd:.";
-let storyText2 = "Hello my name is Astronaut Bob. I am on my way to planet :insertY:. I have heard that the atmosphere will make me :insertz: because I will weigh 300  pounds. Luckily, my friend :insertx: will pick me up in their rocket ship and take me back so I can  take :insertd:.";
 
 
 let insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas', 'Thomas the Train'];
@@ -36,19 +35,21 @@ function result() {
 
 if (customName.value !== '') {
     let name = customName.value;
-    newStory = newStory.replace('Bob',name);
+    newStory = newStory.replaceAll('Bob',name);
+    }
   }
 
   if(document.getElementById("story2").checked) {
-    let newStory = storyText2;
-    newStory = newStory.replace('Bob',name);
+    let storyText2 = "Hello my name is Astronaut Bob. I am on my way to planet :inserty:. I have heard that the atmosphere will make me :insertz: because I will weigh 300  pounds. Luckily, my friend :insertx: will pick me up in their rocket ship and take me back so I can  take :insertd:.";
+    newStory = newStory.replace(storyText, storyText2)
   }
+
   if(document.getElementById("uk").checked) {
     let weight = Math.round(300*0.0714286) + 'stone';
     let temperature =  Math.round((94-32)*5/9) + 'celsius';
     newStory = newStory.replace('94 fahrenheit',temperature);
     newStory = newStory.replace('300 pounds',weight);
   }
+
   story.textContent = newStory;
   story.style.visibility = 'visible';
-}
