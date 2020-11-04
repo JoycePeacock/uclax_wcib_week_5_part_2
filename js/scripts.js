@@ -34,7 +34,7 @@ function result() {
   newStory = newStory.replace(':insertz:',zItem);
   newStory = newStory.replace(':insertd:',dItem);
 
-if (customName.value !== '')
+if (customName.value !== '') {
     let name = customName.value;
     newStory = newStory.replaceAll('Bob',name);
   }
