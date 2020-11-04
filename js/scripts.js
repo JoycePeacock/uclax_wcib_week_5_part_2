@@ -11,10 +11,11 @@ function randomValueFromArray(array){
 }
 
 let storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day. Bob then took :insertd:.";
+let storyText2 = "Hello my name is Astronaut Bob. I am on my way to planet :inserty:. I will have :insertz: because in that atmosphere I will weigh 300  pounds. Luckily, my friend :insertx: will pick me up in their rocket ship and take me back so I can  take :insertd:.";
 
 
 let insertX = ['Willy the Goblin', 'Big Daddy', 'Father Christmas', 'Thomas the Train'];
-let insertY = ['the soup kitchen', 'Disneyland', 'the White House', 'Transylvania'];
+let insertY = ['Hollywood', 'Disneyland', 'Newcastle', 'Transylvania'];
 let insertZ = ['spontaneously combusted', 'melted into a puddle on the sidewalk', 'turned into a slug and crawled away'];
 let insertD = ['a long swig of whiskey', 'a long walk off a short pier', 'a much needed vacation'];
 //3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION
@@ -36,12 +37,25 @@ function result() {
 if (customName.value !== '') {
     let name = customName.value;
     newStory = newStory.replaceAll('Bob',name);
-    }
   }
 
   if(document.getElementById("story2").checked) {
-    let storyText2 = "Hello my name is Astronaut Bob. I am on my way to planet :inserty:. I have heard that the atmosphere will make me :insertz: because I will weigh 300  pounds. Luckily, my friend :insertx: will pick me up in their rocket ship and take me back so I can  take :insertd:.";
-    newStory = newStory.replace(storyText, storyText2)
+    newStory = storyText.replace(storyText, storyText2);
+    let xItem = randomValueFromArray (insertX);
+    let yItem = randomValueFromArray (insertY);
+    let zItem = randomValueFromArray (insertZ);
+    let dItem = randomValueFromArray (insertD);
+
+    newStory = newStory.replace(':insertx:',xItem);
+    newStory = newStory.replace(':insertx:',xItem);
+    newStory = newStory.replace(':inserty:',yItem);
+    newStory = newStory.replace(':insertz:',zItem);
+    newStory = newStory.replace(':insertd:',dItem);
+
+    if (customName.value !== '') {
+        let name = customName.value;
+        newStory = newStory.replaceAll('Bob',name);
+      }
   }
 
   if(document.getElementById("uk").checked) {
@@ -53,3 +67,4 @@ if (customName.value !== '') {
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
+}
